@@ -3,7 +3,8 @@ import InputGroup from '../componnenst/inputGroup.js';
 class Login {
    constructor() {
        this.$formContainer = document.createElement('form');
-
+      this.$formContainer.setAttribute('class',
+      'w-1/3 mx-auto p-8 mt-12 bg-blue-400 rounded-lg ' );
     //    this.$emailLabel = document.createElement('label');
     //      this.$emailLabel.innerText = 'Email';
     //      this.$emailInput = document.createElement('input');
@@ -19,6 +20,8 @@ class Login {
          
          this.$loginButton = document.createElement('button');
             this.$loginButton.innerText = 'Login';
+            this.$loginButton.setAttribute('class',
+             'py-2 px-8 rounded-lg bg-yellow-400 text-black hover:bg-yellow-500');
 
 
 
