@@ -18,13 +18,13 @@ export const Pi = Math.PI;
 
 
 
-    class Helper {
-        static sum(a, b) {
-            return a + b;
-        }
-    
-        static Pi = Math.PI;
+class Helper {
+    static sum(a, b) {
+        return a + b;
+    }
+
+    static Pi = Math.PI;
 }
-   export default Helper;
+export default Helper;
 
 // import Pi from './helper.js';

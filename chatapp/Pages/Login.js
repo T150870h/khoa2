@@ -38,8 +38,6 @@ class Login {
     this.$goToRegister.setAttribute('class', 'text-white ml-4 cursor-pointer ');
     this.$goToRegister.addEventListener('click', this.goToRegisterPage);
 
-
-
   }
   goToRegisterPage = () => {
     const registerScreen = new Register();
@@ -51,11 +49,17 @@ class Login {
 
     try {
       const email = this.$email.getValue();
-      console.log('email', this.$email.setErrorMsg);
       const password = this.$password.getValue();
-      //  if( email.length === 0) {
-      //      this.$email.setErrorMsg('Email is required');
-      //  }
+      if (email.length === 0) {
+        this.$email.setErrorMsg('Email is required');
+      } else {
+        this.$email.setErrorMsg('');
+      }
+      if (password.length === 0) {
+        this.$password.setErrorMsg('Password is required');
+      } else {
+        this.$password.setErrorMsg('');
+      }
 
       if (email && password) {
         const response = await signInWithEmailAndPassword(auth, email, password);
