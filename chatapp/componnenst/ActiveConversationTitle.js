@@ -9,10 +9,10 @@ class ActiveConversationTitle {
            this.$member = document.createElement('h4');
            this.$member.textContent = '0 Member';
     }
-    render(chatContainer) {
+    render() {
         this.$container.appendChild(this.$title);
         this.$container.appendChild(this.$member);
-        chatContainer.appendChild(this.$container);
+       return this.$container
         
     }
 }

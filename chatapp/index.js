@@ -45,7 +45,7 @@ class App {
 const view = document.getElementById('app');
 const app = new App(view); // truyền vào thẻ div chứa giao diện của app
 
-const LoginScreen = new Login();
+// const LoginScreen = new Login();
 // const RegisterScreen = new Register();
 
 // console.log(view)
