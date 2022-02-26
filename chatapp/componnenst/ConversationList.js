@@ -35,7 +35,6 @@ class ConversationList {
         for (let i = 0; i < 5; i++) {
             let temp = new ConversationItem(i);
             this.$container.appendChild(temp.render());
-            console.log(i)
 
         }
 
