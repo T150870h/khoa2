@@ -5,32 +5,36 @@ import ConversationList from '../componnenst/ConversationList.js';
 import ChatContainer from '../componnenst/ChatContainer.js';
 
 class Main {
+    _actieConversation;
     constructor() {
         this.$mainContainer = document.createElement('div');
-        this.$mainContainer.setAttribute('class', 'flex')
+        this.$mainContainer.setAttribute('class', 'flex');
 
-        this.$conversationList = new ConversationList();
-
+        this.$conversationList = new ConversationList(this.setActiveConversation    );
         this.$ChatContainer = new ChatContainer();
 
         //    this.$welcome = document.createElement('h1');
         //     this.$welcome.innerText = 'Welcome to ChatApp';
-
         //     this.$sighOutButton = document.createElement('button');
         //     this.$sighOutButton.setAttribute('class', 'py-2 px-8 rounded-lg bg-yellow-400 text-black hover:bg-yellow-500' )
         //     this.$sighOutButton.innerText = 'Sign Out';
         //     this.$sighOutButton.addEventListener('click', this.signOut);
 
     }
-    // signOut = () => {
-    //     signOut(auth).then((response) => {
-    //         if (response) {
-    //             alert('you have signed out');
-    //         }
-    //     }).catch((error) => {
-    //         alert('error signing out');
-    //     })
-    // }
+        // signOut = () => {
+        //     signOut(auth).then((response) => {
+        //         if (response) {
+        //             alert('you have signed out');
+        //         }
+        //     }).catch((error) => {
+        //         alert('error signing out');
+        //     })
+         // }
+
+          setActiveConversation(conversation) {
+              console.log('setActiveConversation', conversation);
+             this._actieConversation = conversation;
+          }
     render(container) {
         //    this.$mainContainer.appendChild(this.$welcome);
         //    this.$mainContainer.appendChild(this.$sighOutButton);

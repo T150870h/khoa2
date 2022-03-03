@@ -35,7 +35,7 @@ class App {
   setActiveScreen(screen) {
     if (this._activeScreen) {
       this.view.innerHTML = '';// xoá hết tất cả các html trong app hiển thị trên màn hình 
-      screen.render(this.view);// truyền thẻ div chứa giao diện của app vào screen.render()
+      // screen.render(this.view);// truyền thẻ div chứa giao diện của app vào screen.render()
     }
     this._activeScreen = screen;
     screen.render(this.view);

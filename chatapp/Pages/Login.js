@@ -5,9 +5,6 @@ import app from '../index.js';
 import { auth } from '../constants/commons.js';
 import Main from '../Pages/Main.js';
 
-
-
-
 class Login {
   // $emailGroup;
   // $passwordGroup;
@@ -24,29 +21,23 @@ class Login {
     //      this.$passwordInput = document.createElement('input');
     //      this.$passwordInput.placeholder = 'Password';
     this.$formContainer.addEventListener('submit', this.onSubmit);
-
     this.$email = new InputGroup('Email', 'email', 'Email');
     this.$password = new InputGroup('Password', 'password', 'Password');
-
     this.$loginButton = document.createElement('button');
     this.$loginButton.type = 'submit';
     this.$loginButton.innerText = 'Login';
     this.$loginButton.setAttribute('class', 'py-2 px-8 rounded-lg bg-yellow-400 text-black hover:bg-yellow-500');
-
     this.$goToRegister = document.createElement('span');
     this.$goToRegister.innerText = 'Not a member?';
     this.$goToRegister.setAttribute('class', 'text-white ml-4 cursor-pointer ');
     this.$goToRegister.addEventListener('click', this.goToRegisterPage);
-
   }
   goToRegisterPage = () => {
     const registerScreen = new Register();
     app.setActiveScreen(registerScreen);
-
   }
   onSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const email = this.$email.getValue();
       const password = this.$password.getValue();
