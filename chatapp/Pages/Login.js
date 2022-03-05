@@ -1,7 +1,7 @@
 import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js'
 import Register from './Register.js';
 import InputGroup from '../componnenst/inputGroup.js';
-import app from '../index.js';
+// import app from '../index.js';
 import { auth } from '../constants/commons.js';
 import Main from '../Pages/Main.js';
 
