@@ -7,12 +7,11 @@ import {
     collection,
     query,
     where,
-    onSnapshot,
+    onSnapshot, 
 } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js'
 import ConversationItem from "./ConversationItem.js";
 import NewConversationButton from "./NewConversationButton.js";
 import NewConversationModal from "./NewConversationModal.js";
-import mockConversions from '../constants/mocData.js';
 import{auth, db} from "../constants/commons.js";
 class ConversationList {
     constructor(setActiveConversation) {

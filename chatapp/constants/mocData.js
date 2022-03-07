@@ -17,3 +17,23 @@
 ]
 
 export default mockConversions;
+   export const mockMessages = [
+       {
+           content: 'hello',
+           createdAt: 1,
+           conversationId: 'a',
+           senderId: 'quang',
+       },
+       {
+        content: 'how are you',
+        createdAt: 2,
+        conversationId: 'a',
+        senderId: 'quang',
+    },
+    {
+        content: 'I am fine',
+        createdAt: 2,
+        conversationId: 'a',
+        senderId: 'quang',
+    }
+   ]
